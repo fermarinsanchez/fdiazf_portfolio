@@ -44,6 +44,7 @@ const portfolio = () => {
     }
 
     return (
+        <>
         <div className={styles.mainContainer}>
             <SectionHeader
                 title={'Portfolio'}
@@ -61,16 +62,18 @@ const portfolio = () => {
                     </div>
                 </div>
             </div>
-           {category === 'UX/UI'  
-                ? 
-                <div className={styles.portfolioContainer}>
-                    <UXUISection />
-                </div>
-                :
-                <div className={styles.illustationContainer}>
-                    <IllustrationSection />
-                </div>}
+           
         </div>
+        {category === 'UX/UI'  
+        ? 
+        <div className={styles.portfolioContainer}>
+            <UXUISection />
+        </div>
+        :
+        <div className={styles.illustationContainer}>
+            <IllustrationSection />
+        </div>}
+        </>
     )
 }
 

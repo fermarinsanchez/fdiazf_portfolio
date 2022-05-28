@@ -8,7 +8,12 @@
     padding: 0;
     margin-top: 24px;
     margin-bottom: 24px;
-
+    & > p {
+        padding-bottom: 16px;
+        font-size: 14px;
+        font-family: 'SF UI Display';
+        font-weight: 400;
+    }
 }
  .buttonShadow {
     width: 278px;
