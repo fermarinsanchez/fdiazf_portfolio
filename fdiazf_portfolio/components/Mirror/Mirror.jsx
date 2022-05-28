@@ -39,7 +39,6 @@ const Mirror = () => {
               <path d="M164.178 202.585C164.178 215.371 160.336 225.739 155.583 225.739C150.829 225.739 146.987 215.371 146.987 202.585" stroke="black" stroke-width="3.31239" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M165.006 235.874C165.006 244.403 160.783 251.31 155.583 251.31C150.382 251.31 146.159 244.403 146.159 235.874" stroke="black" stroke-width="3.31239" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-
           </div>
         </div>
       </div>

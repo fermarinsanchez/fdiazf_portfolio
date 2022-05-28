@@ -1,0 +1,16 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 72px;
+    padding: 0;
+    position: relative;
+}
+
+.getBackArrow {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+}

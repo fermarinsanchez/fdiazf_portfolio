@@ -5,7 +5,7 @@ import styles from './FatButton.module.scss'
 const FatButton = (props) => {
     return (
         <div className={styles.mainContainer}>
-            <Link href={props.link}>
+            <Link href={`${props.link}`}>
                 <div className={styles.buttonShadow}>
                     <div className={styles.fatButtonContainer}>
                         <p className={styles.buttonText}>{props.text}</p>

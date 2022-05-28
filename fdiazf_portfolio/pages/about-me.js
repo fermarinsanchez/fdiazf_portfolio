@@ -1,0 +1,120 @@
+import React from 'react'
+import SectionHeader from '../components/SectionHeader/SectionHeader'
+import AboutSection from '../components/AboutSection/AboutSection'
+import styles from '../styles/AboutMe.module.scss'
+import FatButton from '../components/FatButton/FatButton'
+
+const AboutMe = () => {
+
+    const textDescription = {
+        "Ironhack": [
+            'Comprender las necesidades de los usuarios y aportar soluciones creativas para aumentar la experiencia de usuario.',
+            'Creación de wireframes para mostrar el contenido y el flujo del proceso en el producto digital.',
+            'Creación de prototipos visuales y funcionales para mostrar las funcionalidades y los flujos del producto digital.'
+        ],
+        "EAToledo": [
+            'Proponer y realizar soluciones gráficas para transmitir mensajes publicitarios.',
+            'Planificar el desarrollo del proyecto de imagen publicitaria desde la identificación del encargo comunicativo, la definición de los aspectos formales y estéticos, funcionales y técnicos.',
+            'Organizar y llevar a cabo las diferentes fases del proyecto y los correspondientes controles de calidad que garanticen la expresión gráfica óptima del mensaje.'
+        ],
+        "EATalavera": [
+            'Dirección del proceso de preparación y revisión de proyectos para optimizar el proceso de impresión.'
+        ]
+    }
+
+
+    return (
+        <div className={styles.mainContaier}>
+            <SectionHeader
+                title={'Sobre mí'}
+                link={'/menu'}
+            />
+            <div className={styles.image}>
+                <img src="/assets/images/fernan.png" alt="Fernando Díaz Franco" />
+            </div>
+            <div className={styles.name}>
+                <h1>Fernando Díaz</h1>
+                <p>UX/UI Designer - Ilustrador</p>
+            </div>
+            <div className={styles.description}>
+                <p>
+                    Después de varios años he decidido orientar mi carrera hacia el diseño de producto digital, lo cual me ha permitido entrar en un mundo que me apasiona: transformar problemas complejos en soluciones creativas.
+                </p>
+            </div>
+            <div className={styles.ExperienceContainer}>
+                <AboutSection
+                    title={'IRON HACK'}
+                    subtitle={'UX/UI (2021-2022)'}
+                    description={textDescription.Ironhack}
+                />
+                <AboutSection
+                    title={'ESUELA DE ARTE TOLEDO'}
+                    subtitle={'Gráfica publicitaria (2005-2007)'}
+                    description={textDescription.EAToledo}
+                />
+                <AboutSection
+                    title={'ESUELA DE ARTE TALAVERA'}
+                    subtitle={'Arte final (2003-2004)'}
+                    description={textDescription.EATalavera}
+                />
+            </div>
+            <div className={styles.lists}>
+                <p>HERRAMIENTAS</p>
+                <ul>
+                    <li>Suite Adobe</li>
+                    <li>Figma</li>
+                    <li>Miro</li>
+                    <li>Slack</li>
+                    <li>Trello</li>
+                </ul>
+                <p>IDIOMAS</p>
+                <ul>
+                    <li>Español Nativo</li>
+                    <li>Inglés Medio</li>
+                </ul>
+                <p>APTITUDES</p>
+                <div className={styles.containerAptitudes}>
+                    <div className={styles.aptitudes}>
+                        <p>Empatía</p>
+                    </div>
+                    <div className={styles.aptitudes}>
+                        <p>Motivación</p>
+                    </div>
+                    <div className={styles.aptitudes}>
+                        <p>Curiosidad</p>
+                    </div>
+                    <div className={styles.aptitudes}>
+                        <p>Comunicación</p>
+                    </div>
+                    <div className={styles.aptitudes}>
+                        <p>Capacidad de integración</p>
+                    </div>
+                </div>
+                <p>AFICIONES</p>
+                <AboutSection
+                    title={'Música'}
+                    subtitle={false}
+                    description={['Soy un melómano empedernido y además toco el bajo en varios grupos.']}
+                />
+                <AboutSection
+                    title={'Comics'}
+                    subtitle={false}
+                    description={['Llevo leyendo comics y tebeos desde que tengo memoria. Me encanta sumergirme en sus historias.']}
+                />
+
+            </div>
+            <div className={styles.hablamos}>
+                <p>¿Quieres saber más de mí?</p>
+                <FatButton 
+                    text={'¿Hablamos?'}
+                    link={'/contacto'}
+                />
+                
+
+            </div>
+
+        </div>
+    )
+}
+
+export default AboutMe
