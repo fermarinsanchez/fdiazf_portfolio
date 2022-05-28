@@ -1,0 +1,42 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin-bottom: 24px;
+    font-family: 'SF UI Display';
+}
+
+.switchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 277px;
+    height: 34px;
+    margin-top: 38px;
+    border-radius: 250px;
+    border: 1px solid #000000;
+    position: relative;
+    & > p {
+        font-family: 'Cochin';
+        font-weight: 700;
+    }
+    & .yellowButton {
+        position: absolute;
+        width: 138px;
+        height: 34px;
+        background-color: #FCD400;
+        border: 1px solid #000000;
+        border-radius: 250px;
+        right: 0;
+        display: flex;
+        align-items: center;
+        & .arrow {
+            display: flex;
+            align-items: center;
+            margin-left: 16px;
+        }
+    }
+}

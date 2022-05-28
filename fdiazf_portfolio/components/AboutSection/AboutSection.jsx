@@ -12,7 +12,7 @@ const AboutSection = (props) => {
             <p>{props.subtitle && props.subtitle}</p>
         </div>
         <div className={styles.description}>
-            {props.description.map((paragraph, id) => {
+            {props.description && props.description.map((paragraph, id) => {
                 return <p key={id}>{paragraph}</p>
             })}
         </div>

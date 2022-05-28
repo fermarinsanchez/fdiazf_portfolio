@@ -41,7 +41,7 @@ const AboutMe = () => {
                     Después de varios años he decidido orientar mi carrera hacia el diseño de producto digital, lo cual me ha permitido entrar en un mundo que me apasiona: transformar problemas complejos en soluciones creativas.
                 </p>
             </div>
-            <div className={styles.ExperienceContainer}>
+            <div className={styles.experienceContainer}>
                 <AboutSection
                     title={'IRON HACK'}
                     subtitle={'UX/UI (2021-2022)'}
@@ -59,7 +59,10 @@ const AboutMe = () => {
                 />
             </div>
             <div className={styles.lists}>
-                <p>HERRAMIENTAS</p>
+                <p 
+                    className={styles.listTitle}
+                    style={{marginTop: 0}}
+                    >HERRAMIENTAS</p>
                 <ul>
                     <li>Suite Adobe</li>
                     <li>Figma</li>
@@ -67,12 +70,12 @@ const AboutMe = () => {
                     <li>Slack</li>
                     <li>Trello</li>
                 </ul>
-                <p>IDIOMAS</p>
+                <p className={styles.listTitle}>IDIOMAS</p>
                 <ul>
                     <li>Español Nativo</li>
                     <li>Inglés Medio</li>
                 </ul>
-                <p>APTITUDES</p>
+                <p className={styles.listTitle}>APTITUDES</p>
                 <div className={styles.containerAptitudes}>
                     <div className={styles.aptitudes}>
                         <p>Empatía</p>
@@ -90,16 +93,16 @@ const AboutMe = () => {
                         <p>Capacidad de integración</p>
                     </div>
                 </div>
-                <p>AFICIONES</p>
+                <p className={styles.listTitle}>AFICIONES</p>
                 <AboutSection
                     title={'Música'}
-                    subtitle={false}
-                    description={['Soy un melómano empedernido y además toco el bajo en varios grupos.']}
+                    subtitle={'Soy un melómano empedernido y además toco el bajo en varios grupos.'}
+                    description={false}
                 />
                 <AboutSection
                     title={'Comics'}
-                    subtitle={false}
-                    description={['Llevo leyendo comics y tebeos desde que tengo memoria. Me encanta sumergirme en sus historias.']}
+                    subtitle={'Llevo leyendo comics y tebeos desde que tengo memoria. Me encanta sumergirme en sus historias.'}
+                    description={false}
                 />
 
             </div>
@@ -107,7 +110,7 @@ const AboutMe = () => {
                 <p>¿Quieres saber más de mí?</p>
                 <FatButton 
                     text={'¿Hablamos?'}
-                    link={'/contacto'}
+                    link={'mailto:fdiazfr@gmail.com'}
                 />
                 
 

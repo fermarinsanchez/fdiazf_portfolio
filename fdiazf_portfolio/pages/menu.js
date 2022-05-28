@@ -16,7 +16,7 @@ const menu = () => {
                 />
                 <FatButton
                     text={'Portfolio'}
-                    link={'/words'}
+                    link={'/portfolio'}
                 />
                 <FatButton
                     text={'Contacto'}

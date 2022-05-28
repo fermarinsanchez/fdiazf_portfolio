@@ -9,7 +9,7 @@
     margin-top: 24px;
     margin-bottom: 24px;
     position: relative;
-    font-size: 14px;
+    font-size: 16px;
     font-family: 'SF UI Display';
 }
 
@@ -32,6 +32,8 @@
     & > p {
         margin-top: 0px;
         margin-bottom: 8px;
+        font-family: 'SF UI Display';
+        font-size: 16px;
     }
 }
 

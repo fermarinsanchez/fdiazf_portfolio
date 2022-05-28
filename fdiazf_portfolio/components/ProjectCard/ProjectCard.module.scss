@@ -1,0 +1,14 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 24px;
+}
+.titleContainer {
+    font-family: 'Cochin';
+    font-size: 26px;
+    font-weight: 700;
+    & > p {
+        margin-bottom: 0px;
+    }
+}
