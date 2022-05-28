@@ -1,0 +1,63 @@
+/*
+  COLOR VARIABLES
+*/
+
+$color-primary:#000000;
+$color-secondary:#FCD400;
+
+/*
+  FONT VARIABLES DESKTOP
+  Cochin : 700 79px H1
+  Cochin : 700 48px Buttons
+
+
+  SF UI Display 400 20px Subtitle
+  SF UI Display 400 18px body
+  SF UI Display 700 bold 18px body
+*/
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: url('/fonts/SFUIDisplay-Light.ttf') format('truetype');
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: url('/fonts/SFUIDisplay-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cochin';
+  src: url('/fonts/Cochin.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Cochin', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
