@@ -5,7 +5,7 @@ import styles from './FatButton.module.scss'
 const FatButton = (props) => {
     return (
         <div className={styles.mainContainer}>
-        <p>{props.upperText}</p>
+       {props.upperText && <p>{props.upperText}</p>}
             <Link href={props.link ? `${props.link}` : '#'} >
                 <div className={styles.buttonShadow}>
                     <div className={styles.fatButtonContainer} style={props.color &&{backgroundColor: props.color}}>

@@ -5,6 +5,9 @@ import styles from './IllustrationSection.module.scss'
 const IllustrationSection = () => {
 
     const [editorial, setEditorial] = React.useState(false);
+    const [carteleria, setCarteleria] = React.useState(false);
+    
+
 
     return (
         <div className={styles.mainContainer}>
@@ -28,11 +31,54 @@ const IllustrationSection = () => {
                     setIsOpen={setEditorial}
                     isOpen={editorial}
                     cardChildren={
-                        <>
-                        <h1>Contenido Extra</h1>
-                        </>
+                        <div className={styles.containerEdiciones}>
+                        <img src={'/assets/images/ojo_vago.jpg'} alt='El Ojo Vago Descrito ediciones'/>
+                        <img src={'/assets/images/no_tengo_miedo.jpg'} alt='No Tengo Miedo Descrito ediciones'/>
+                        <img src={'/assets/images/carrusel_de_canciones.jpg'} alt='Carrusel de Canciones Libro'/>
+                        <img src={'/assets/images/colorissimo.jpg'} alt='Colorissimo Libro'/>
+                        <img src={'/assets/images/descrito.jpg'} alt='Descrito Libro'/>
+                        </div>
                      }
-            />
+                />
+                <ProjectCard 
+                    image={'/assets/images/piedraCardMobile.jpg'}
+                    title={'Cartelería'}
+                    description={'Ilustración de carteles y flyers para distintos eventos musicales.'}
+                    setIsOpen={setCarteleria}
+                    isOpen={carteleria}
+                    cardChildren={
+                        <div className={styles.containerCarteleria}>
+                        <img src={'/assets/images/micro_treatro.jpg'} alt='Cartel Micdro Teatro'/>
+                        <img src={'/assets/images/balambamboo.jpg'} alt='Carteles Balambamboo Fest'/>
+                         <div className={styles.comboImg}>
+                        <img src={'/assets/images/fred_de_mercedes.jpg'} alt='Cartel Fred de Mercedes'/>
+                        <img src={'/assets/images/mdc_7.jpg'} alt='Cartel Monasterio de cultura 7 edición'/>
+                        </div>
+                        <div className={styles.comboImg}>
+                        <img src={'/assets/images/nooirax_piedra.jpg'} alt='Cartel Fiesta 
+                        Nooirax'/>
+                        <img src={'/assets/images/nooirax_piedra_2.jpg'} alt='Cartel Fiesta 
+                        Nooirax'/>
+                        </div> 
+                        </div>
+                     }
+                />
+                <ProjectCard 
+                    image={'/assets/images/VampireCard.jpg'}
+                    title={'Editorial'}
+                    description={'Ilustraciones de libros de texto y narrativa para diversas editoriales.'}
+                    setIsOpen={setEditorial}
+                    isOpen={editorial}
+                    cardChildren={
+                        <div className={styles.containerEdiciones}>
+                        <img src={'/assets/images/ojo_vago.jpg'} alt='El Ojo Vago Descrito ediciones'/>
+                        <img src={'/assets/images/no_tengo_miedo.jpg'} alt='No Tengo Miedo Descrito ediciones'/>
+                        <img src={'/assets/images/carrusel_de_canciones.jpg'} alt='Carrusel de Canciones Libro'/>
+                        <img src={'/assets/images/colorissimo.jpg'} alt='Colorissimo Libro'/>
+                        <img src={'/assets/images/descrito.jpg'} alt='Descrito Libro'/>
+                        </div>
+                     }
+                />
             </div>
         </div>
     )
