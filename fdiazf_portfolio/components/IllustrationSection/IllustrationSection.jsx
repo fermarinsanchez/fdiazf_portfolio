@@ -6,7 +6,8 @@ const IllustrationSection = () => {
 
     const [editorial, setEditorial] = React.useState(false);
     const [carteleria, setCarteleria] = React.useState(false);
-    
+    const [portadas, setPortadas] = React.useState(false);
+
 
 
     return (
@@ -24,7 +25,7 @@ const IllustrationSection = () => {
                 <p>
                     Aquí se puede ver una muestra.
                 </p>
-                <ProjectCard 
+                <ProjectCard
                     image={'/assets/images/VampireCard.jpg'}
                     title={'Editorial'}
                     description={'Ilustraciones de libros de texto y narrativa para diversas editoriales.'}
@@ -32,15 +33,15 @@ const IllustrationSection = () => {
                     isOpen={editorial}
                     cardChildren={
                         <div className={styles.containerEdiciones}>
-                        <img src={'/assets/images/ojo_vago.jpg'} alt='El Ojo Vago Descrito ediciones'/>
-                        <img src={'/assets/images/no_tengo_miedo.jpg'} alt='No Tengo Miedo Descrito ediciones'/>
-                        <img src={'/assets/images/carrusel_de_canciones.jpg'} alt='Carrusel de Canciones Libro'/>
-                        <img src={'/assets/images/colorissimo.jpg'} alt='Colorissimo Libro'/>
-                        <img src={'/assets/images/descrito.jpg'} alt='Descrito Libro'/>
+                            <img src={'/assets/images/ojo_vago.jpg'} alt='El Ojo Vago Descrito ediciones' />
+                            <img src={'/assets/images/no_tengo_miedo.jpg'} alt='No Tengo Miedo Descrito ediciones' />
+                            <img src={'/assets/images/carrusel_de_canciones.jpg'} alt='Carrusel de Canciones Libro' />
+                            <img src={'/assets/images/colorissimo.jpg'} alt='Colorissimo Libro' />
+                            <img src={'/assets/images/descrito.jpg'} alt='Descrito Libro' />
                         </div>
-                     }
+                    }
                 />
-                <ProjectCard 
+                <ProjectCard
                     image={'/assets/images/piedraCardMobile.jpg'}
                     title={'Cartelería'}
                     description={'Ilustración de carteles y flyers para distintos eventos musicales.'}
@@ -48,36 +49,48 @@ const IllustrationSection = () => {
                     isOpen={carteleria}
                     cardChildren={
                         <div className={styles.containerCarteleria}>
-                        <img src={'/assets/images/micro_treatro.jpg'} alt='Cartel Micdro Teatro'/>
-                        <img src={'/assets/images/balambamboo.jpg'} alt='Carteles Balambamboo Fest'/>
-                         <div className={styles.comboImg}>
-                        <img src={'/assets/images/fred_de_mercedes.jpg'} alt='Cartel Fred de Mercedes'/>
-                        <img src={'/assets/images/mdc_7.jpg'} alt='Cartel Monasterio de cultura 7 edición'/>
-                        </div>
-                        <div className={styles.comboImg}>
-                        <img src={'/assets/images/nooirax_piedra.jpg'} alt='Cartel Fiesta 
+                            <img src={'/assets/images/micro_treatro.jpg'} alt='Cartel Micdro Teatro' />
+                            <img src={'/assets/images/balambamboo.jpg'} alt='Carteles Balambamboo Fest' />
+                            <div className={styles.comboImg}>
+                                <img src={'/assets/images/fred_de_mercedes.jpg'} alt='Cartel Fred de Mercedes' />
+                                <img src={'/assets/images/mdc_7.jpg'} alt='Cartel Monasterio de cultura 7 edición' />
+                            </div>
+                            <div className={styles.comboImg}>
+                                <img src={'/assets/images/nooirax_piedra.jpg'} alt='Cartel Fiesta 
                         Nooirax'/>
-                        <img src={'/assets/images/nooirax_piedra_2.jpg'} alt='Cartel Fiesta 
+                                <img src={'/assets/images/nooirax_piedra_2.jpg'} alt='Cartel Fiesta 
                         Nooirax'/>
-                        </div> 
+                            </div>
                         </div>
-                     }
+                    }
                 />
-                <ProjectCard 
-                    image={'/assets/images/VampireCard.jpg'}
-                    title={'Editorial'}
-                    description={'Ilustraciones de libros de texto y narrativa para diversas editoriales.'}
-                    setIsOpen={setEditorial}
-                    isOpen={editorial}
+                <ProjectCard
+                    image={'/assets/images/portadaLPCard.jpg'}
+                    title={'Discos'}
+                    description={'Ilustración de portadas e interiores para discos de vinilo, cd y digital.'}
+                    setIsOpen={setPortadas}
+                    isOpen={portadas}
                     cardChildren={
                         <div className={styles.containerEdiciones}>
-                        <img src={'/assets/images/ojo_vago.jpg'} alt='El Ojo Vago Descrito ediciones'/>
-                        <img src={'/assets/images/no_tengo_miedo.jpg'} alt='No Tengo Miedo Descrito ediciones'/>
-                        <img src={'/assets/images/carrusel_de_canciones.jpg'} alt='Carrusel de Canciones Libro'/>
-                        <img src={'/assets/images/colorissimo.jpg'} alt='Colorissimo Libro'/>
-                        <img src={'/assets/images/descrito.jpg'} alt='Descrito Libro'/>
+                            <div className={styles.portadaTitulo}>
+                                <img src={'/assets/images/emilia_pardo_bazan_la_herida.jpg'} alt='Portada de Emilia, Pardo y Bazán de su disco "La herida"' />
+                                <p>Emilia, Pardo y Bazán, "La herida"</p>
+                            </div>
+                            <div className={styles.portadaTitulo}>
+                                <img src={'/assets/images/phantom_crst_marvel_&_blood_II.jpg'} alt='Portada Phantom Crest de su disco "Marvel and Blood II"' />
+                                <p>Phantom Crest, "Marvel & Blood II"</p>
+                            </div>
+                            <div className={styles.portadaTitulo}>
+                                <img src={'/assets/images/tage_heritage.jpg'} alt='Portada Tage de su disco "Heritage"' />
+                                <p>Tage, "Heritage"</p>
+                            </div>
+                            <div className={styles.portadaTitulo}>
+                                <img src={'/assets/images/del_cafe_a_los_helenistas_contenido_sugerido.jpg'} alt='Portada Del café de los Helenistas de su disco "Contenido Sugerido"' />
+                                <p>Del café de los Helenistas, "Contenido Sugerido"</p>
+                            </div>
+                           
                         </div>
-                     }
+                    }
                 />
             </div>
         </div>

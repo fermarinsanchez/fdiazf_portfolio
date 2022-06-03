@@ -10,7 +10,7 @@ const ProjectCard = (props) => {
   };
 
   return (
-    <div className={styles.mainContainer}>
+    <div className={styles.mainContainer} id={`${props.id}`}>
       <img src={props.image} alt={props.title} />
       <div className={styles.titleContainer}>
         <p>{props.title}</p>
@@ -22,7 +22,7 @@ const ProjectCard = (props) => {
         {!props.isOpen ?
           <FatButton
             text={'Ver más'}
-            link={props.link}
+            link={false}
           />
           :
           <div className={styles.containerChildren}>

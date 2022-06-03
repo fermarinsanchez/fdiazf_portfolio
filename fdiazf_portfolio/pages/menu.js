@@ -20,7 +20,7 @@ const menu = () => {
                 />
                 <FatButton
                     text={'Contacto'}
-                    link={'/contact'}
+                    link={'/contacto'}
                 />
             </div>
         </div>
