@@ -1,3 +1,5 @@
+import React, { useRef, useEffect } from 'react'
+import { gsap } from "gsap";
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
@@ -6,6 +8,27 @@ import NameWrapper from '../components/NameWrapper/NameWrapper'
 import FatButton from '../components/FatButton/FatButton'
 
 export default function Home() {
+
+  const homeButtonRef = useRef(null)
+  const [isClicked, setIsClicked] = React.useState(false)
+
+  useEffect(() => {
+    gsap.from(homeButtonRef.current, {
+      delay: 3,
+      duration: 1,
+      y: 400,
+      opacity: 0,
+      ease: "power3.out",
+      stagger: {
+        amount: 0.5
+      }
+    })
+  }, [])
+
+  const hadleAnimation = () => {
+    setIsClicked(!isClicked)
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -15,12 +38,17 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Mirror />
-        <NameWrapper />
-        <FatButton 
-          text={'Empezar'}
-          link={'/menu'}
+        <Mirror 
+          isClicked={isClicked}
         />
+        <NameWrapper />
+        <div ref={homeButtonRef} onClick={hadleAnimation}>
+          <FatButton
+            text={'Empezar'}
+            link={'/menu'}
+            timeOut={1000}
+          />
+        </div>
       </main>
 
       <footer className={styles.footer}>

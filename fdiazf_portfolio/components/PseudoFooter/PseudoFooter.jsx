@@ -8,7 +8,7 @@ const PseudoFooter = () => {
             <div className={styles.elementContainer}>
                 <FatButton
                     text={'¿Hablamos?'}
-                    link={'mailto:fdiazfr@gmail.com'}
+                    anchor={'mailto:fdiazfr@gmail.com'}
                     color={'#FFFFFF'}
                     upperText={'¿Quieres saber más de mí?'}
                 />

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useRef} from 'react'
 import { gsap } from "gsap";
 import SectionHeader from '../components/SectionHeader/SectionHeader'
 import NameWrapper from '../components/NameWrapper/NameWrapper'
@@ -8,10 +8,10 @@ import styles from '../styles/Portfolio.module.scss'
 
 const portfolio = () => {
 
-    const buttonRef = React.createRef();
-    const arrowRef = React.createRef();
+    const buttonRef = useRef();
+    const arrowRef = useRef();
 
-    const [category, setCategory] = React.useState('UX/UI');
+    const [category, setCategory] = useState('UX/UI');
 
     const handleClick = () => {
         if (category === 'UX/UI') {

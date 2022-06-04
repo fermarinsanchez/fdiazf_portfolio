@@ -1,18 +1,73 @@
-import React from 'react'
+import React, { useRef, useState, useEffect } from 'react'
+import { gsap } from 'gsap'
 import ProjectCard from '../ProjectCard/ProjectCard';
 import styles from './IllustrationSection.module.scss'
 
 const IllustrationSection = () => {
 
-    const [editorial, setEditorial] = React.useState(false);
-    const [carteleria, setCarteleria] = React.useState(false);
-    const [portadas, setPortadas] = React.useState(false);
+    const [editorial, setEditorial] = useState(false);
+    const [carteleria, setCarteleria] = useState(false);
+    const [portadas, setPortadas] = useState(false);
+
+    const mainRef = useRef()
+    const childrenRef = useRef()
+
+    useEffect(() => {
+        gsap.from(mainRef.current, {
+            duration: 1,
+            x: 500,
+            ease: "power3.out",
+        })
+    }, [])
+    
+
+    useEffect(() => {
+        if (editorial) {
+            gsap.from(childrenRef.current, {
+                duration: 1,
+                y: -300,
+                opacity: 0,
+                ease: "power3.out",
+            })
+        } else if (carteleria) {
+            gsap.from(childrenRef.current, {
+                duration: 1,
+                y: -300,
+                opacity: 0,
+                ease: "power3.out",
+            })
+        } else if (portadas) {
+            gsap.from(childrenRef.current, {
+                duration: 1,
+                y: -300,
+                opacity: 0,
+                ease: "power3.out",
+            })
+        }
+    }, [editorial, carteleria, portadas])
+
+    
+    const handleAnimation = (state, setter) => {
+        if (state) {
+            gsap.to(childrenRef.current, {
+                duration: 1,
+                y: -1300,
+                opacity: 1,
+                ease: "power3.out",
+            })
+            setTimeout(() => {
+                setter(false)
+            }, 600)
+        } else {
+            setter(true)
+        }
+    }
 
 
 
     return (
-        <div className={styles.mainContainer}>
-            <div className={styles.descriptionContainer}>
+        <div className={styles.mainContainer} >
+            <div className={styles.descriptionContainer} ref={mainRef}>
                 <p>
                     Desde que era niño me encantaba dibujar. He tenido la suerte de poder dedicarme a este trabajo, dándome grandes satisfacciones en mi vida.
                 </p>
@@ -31,8 +86,9 @@ const IllustrationSection = () => {
                     description={'Ilustraciones de libros de texto y narrativa para diversas editoriales.'}
                     setIsOpen={setEditorial}
                     isOpen={editorial}
+                    handleAnimation={handleAnimation}
                     cardChildren={
-                        <div className={styles.containerEdiciones}>
+                        <div className={styles.containerEdiciones} ref={childrenRef}>
                             <img src={'/assets/images/ojo_vago.jpg'} alt='El Ojo Vago Descrito ediciones' />
                             <img src={'/assets/images/no_tengo_miedo.jpg'} alt='No Tengo Miedo Descrito ediciones' />
                             <img src={'/assets/images/carrusel_de_canciones.jpg'} alt='Carrusel de Canciones Libro' />
@@ -47,8 +103,9 @@ const IllustrationSection = () => {
                     description={'Ilustración de carteles y flyers para distintos eventos musicales.'}
                     setIsOpen={setCarteleria}
                     isOpen={carteleria}
+                    handleAnimation={handleAnimation}
                     cardChildren={
-                        <div className={styles.containerCarteleria}>
+                        <div className={styles.containerCarteleria} ref={childrenRef}>
                             <img src={'/assets/images/micro_treatro.jpg'} alt='Cartel Micdro Teatro' />
                             <img src={'/assets/images/balambamboo.jpg'} alt='Carteles Balambamboo Fest' />
                             <div className={styles.comboImg}>
@@ -70,8 +127,9 @@ const IllustrationSection = () => {
                     description={'Ilustración de portadas e interiores para discos de vinilo, cd y digital.'}
                     setIsOpen={setPortadas}
                     isOpen={portadas}
+                    handleAnimation={handleAnimation}
                     cardChildren={
-                        <div className={styles.containerEdiciones}>
+                        <div className={styles.containerEdiciones} ref={childrenRef}>
                             <div className={styles.portadaTitulo}>
                                 <img src={'/assets/images/emilia_pardo_bazan_la_herida.jpg'} alt='Portada de Emilia, Pardo y Bazán de su disco "La herida"' />
                                 <p>Emilia, Pardo y Bazán, "La herida"</p>
@@ -88,7 +146,7 @@ const IllustrationSection = () => {
                                 <img src={'/assets/images/del_cafe_a_los_helenistas_contenido_sugerido.jpg'} alt='Portada Del café de los Helenistas de su disco "Contenido Sugerido"' />
                                 <p>Del café de los Helenistas, "Contenido Sugerido"</p>
                             </div>
-                           
+
                         </div>
                     }
                 />
