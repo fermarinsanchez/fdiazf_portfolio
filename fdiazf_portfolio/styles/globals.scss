@@ -18,21 +18,21 @@ $color-secondary:#FCD400;
 
 @font-face {
   font-family: 'SF UI Display';
-  src: url('/fonts/SFUIDisplay-Light.ttf') format('truetype');
+  src: url('../asset/fonts/SFUIDisplay-Light.ttf');
   font-weight: light;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SF UI Display';
-  src: url('/fonts/SFUIDisplay-Bold.ttf') format('truetype');
+  src: url('../asset/fonts/SFUIDisplay-Bold.ttf'); 
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Cochin';
-  src: url('/fonts/Cochin.ttf') format('truetype');
+  src: url('../asset/fonts/Cochin.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
