@@ -1,13 +1,54 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
+import { gsap } from "gsap";
 import styles from './MirrorContacto.module.scss';
 
 
 const MirrorContacto = () => {
+
+
+  const ferRef = useRef();
+  const rightEyeRef = useRef();
+  const leftEyeRef = useRef();
+
+  useEffect(() => {
+    gsap.from(ferRef.current, {
+        duration: 1,
+        y: 400,
+        ease: "power3.out",
+      });
+      gsap.to(rightEyeRef.current, {
+        delay: 1,
+        duration: 0.5,
+        y: -5,
+        ease: "power3.out",
+      });
+      gsap.to(rightEyeRef.current, {
+        delay: 1.5,
+        duration: 0.5,
+        y: 0,
+        ease: "power3.out",
+      });
+      gsap.to(leftEyeRef.current, {
+        delay: 1,
+        duration: 0.5,
+        y: -5,
+        ease: "power3.out",
+      });
+      gsap.to(leftEyeRef.current, {
+        delay: 1.5,
+        duration: 0.5,
+        y: 0,
+        ease: "power3.out",
+      });
+  }, [])
+  
+
+
   return (
     <div className={styles.mainContainer}>
       <div className={styles.blackBorder}>
         <div className={styles.background}>
-          <div className={styles.ferSvg}>
+          <div className={styles.ferSvg} ref={ferRef}>
             <svg width="311" height="472" viewBox="0 0 311 472" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M38.2091 466.929C37.2154 466.929 36.2548 466.482 35.6254 465.704C34.9961 464.926 34.7476 463.899 34.9629 462.922L55.1354 368.651C55.3176 367.79 55.8475 367.028 56.5928 366.548C57.1228 366.2 57.7522 366.034 58.365 366.034C58.6134 366.034 58.8618 366.067 59.1102 366.117L85.4106 372.212C87.1662 372.626 88.2758 374.348 87.9115 376.104L69.8093 464.28C69.4946 465.82 68.1365 466.929 66.5631 466.929H38.2091Z" fill="black" />
               <path d="M58.3809 369.346L84.6812 375.441L66.579 463.617H38.2084L58.3809 369.346ZM58.3809 362.722C57.1387 362.722 55.8966 363.069 54.8201 363.749C53.3129 364.709 52.2695 366.216 51.8886 367.955L31.7162 462.226C31.3021 464.18 31.7824 466.217 33.0411 467.774C34.2998 469.331 36.1879 470.225 38.1919 470.225H66.579C69.7258 470.225 72.442 468.006 73.0713 464.925L91.1735 376.75C91.9022 373.222 89.6829 369.777 86.1718 368.966L59.8715 362.871C59.3746 362.771 58.8777 362.722 58.3809 362.722Z" fill="black" />
@@ -31,9 +72,9 @@ const MirrorContacto = () => {
               <path d="M89.7491 292.764C89.7491 292.764 112.157 336.106 128.206 336.736C134.301 336.967 144.304 325.838 144.304 325.838C144.304 325.838 150.2 341.853 155.583 341.853C160.965 341.853 166.862 325.838 166.862 325.838C166.862 325.838 176.865 336.967 182.96 336.736C198.992 336.106 221.417 292.764 221.417 292.764" stroke="black" stroke-width="3.31239" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M155.583 217.01C131.253 216.96 82.3456 250.001 60.7489 238.822C49.023 232.76 48.344 200.696 48.344 187.496C48.344 158.844 65.4525 119.924 65.4525 119.924C65.4525 119.924 95.7277 134.664 106.079 132.328C114.128 130.523 130.458 110.086 130.458 110.086C130.458 110.086 147.5 125.803 154.821 126.764C168.815 128.602 208.051 107.949 208.051 107.949C208.051 107.949 222.542 128.171 230.111 128.9C234.268 129.298 244.189 119.924 244.189 119.924C244.189 119.924 261.297 158.844 261.297 187.496C261.297 200.696 260.635 232.76 248.892 238.822C227.594 249.802 179.531 217.059 155.583 217.01Z" fill="#F0D5D1" stroke="black" stroke-width="3.31239" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M126.451 211.544C133.695 211.544 139.568 205.671 139.568 198.427C139.568 191.182 133.695 185.31 126.451 185.31C119.206 185.31 113.334 191.182 113.334 198.427C113.334 205.671 119.206 211.544 126.451 211.544Z" fill="white" stroke="black" stroke-width="3.31239" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M126.45 201.672C128.243 201.672 129.697 200.219 129.697 198.426C129.697 196.633 128.243 195.18 126.45 195.18C124.658 195.18 123.204 196.633 123.204 198.426C123.204 200.219 124.658 201.672 126.45 201.672Z" fill="black" stroke="black" stroke-width="3.31239" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path ref={leftEyeRef} d="M126.45 201.672C128.243 201.672 129.697 200.219 129.697 198.426C129.697 196.633 128.243 195.18 126.45 195.18C124.658 195.18 123.204 196.633 123.204 198.426C123.204 200.219 124.658 201.672 126.45 201.672Z" fill="black" stroke="black" stroke-width="3.31239" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M184.699 211.544C191.943 211.544 197.816 205.671 197.816 198.427C197.816 191.182 191.943 185.31 184.699 185.31C177.454 185.31 171.582 191.182 171.582 198.427C171.582 205.671 177.454 211.544 184.699 211.544Z" fill="white" stroke="black" stroke-width="3.31239" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M184.699 201.672C186.492 201.672 187.945 200.219 187.945 198.426C187.945 196.633 186.492 195.18 184.699 195.18C182.906 195.18 181.453 196.633 181.453 198.426C181.453 200.219 182.906 201.672 184.699 201.672Z" fill="black" stroke="black" stroke-width="3.31239" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path ref={rightEyeRef} d="M184.699 201.672C186.492 201.672 187.945 200.219 187.945 198.426C187.945 196.633 186.492 195.18 184.699 195.18C182.906 195.18 181.453 196.633 181.453 198.426C181.453 200.219 182.906 201.672 184.699 201.672Z" fill="black" stroke="black" stroke-width="3.31239" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
               <path d="M204.407 173.337C205.221 173.337 205.881 172.677 205.881 171.863C205.881 171.049 205.221 170.389 204.407 170.389C203.593 170.389 202.933 171.049 202.933 171.863C202.933 172.677 203.593 173.337 204.407 173.337Z" fill="black" />
               <path d="M164.178 202.585C164.178 215.371 160.336 225.739 155.583 225.739C150.829 225.739 146.987 215.371 146.987 202.585" fill="#F0D5D1" />
               <path d="M164.178 202.585C164.178 215.371 160.336 225.739 155.583 225.739C150.829 225.739 146.987 215.371 146.987 202.585" stroke="black" stroke-width="3.31239" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />

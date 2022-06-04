@@ -106,8 +106,14 @@ const IllustrationSection = () => {
                     handleAnimation={handleAnimation}
                     cardChildren={
                         <div className={styles.containerCarteleria} ref={childrenRef}>
-                            <img src={'/assets/images/micro_treatro.jpg'} alt='Cartel Micdro Teatro' />
-                            <img src={'/assets/images/balambamboo.jpg'} alt='Carteles Balambamboo Fest' />
+                           <div className={styles.comboImg} style={{paddingTop: 32}}>
+                                <img src={'/assets/images/scifi.jpg'} alt='Cartel Auditorio Felipe VI 2017' />
+                                <img src={'/assets/images/micro_t.jpg'} alt='Cartel Auditorio Felipe VI Microteatro' />
+                            </div>
+                            <div className={styles.comboImg}>
+                                <img src={'/assets/images/Balam_18.jpg'} alt='Cartel Balambam Boo Fest 2018' />
+                                <img src={'/assets/images/Balam_19.jpg'} alt='Cartel Balambam Boo Fest 2018' />
+                            </div>
                             <div className={styles.comboImg}>
                                 <img src={'/assets/images/fred_de_mercedes.jpg'} alt='Cartel Fred de Mercedes' />
                                 <img src={'/assets/images/mdc_7.jpg'} alt='Cartel Monasterio de cultura 7 edición' />
@@ -130,7 +136,7 @@ const IllustrationSection = () => {
                     handleAnimation={handleAnimation}
                     cardChildren={
                         <div className={styles.containerEdiciones} ref={childrenRef}>
-                            <div className={styles.portadaTitulo}>
+                            <div className={styles.portadaTitulo} style={{paddingTop: 36}}>
                                 <img src={'/assets/images/emilia_pardo_bazan_la_herida.jpg'} alt='Portada de Emilia, Pardo y Bazán de su disco "La herida"' />
                                 <p>Emilia, Pardo y Bazán, "La herida"</p>
                             </div>
