@@ -11,7 +11,7 @@ $color-secondary: #fcd400;
   margin: 0;
 }
 
-.blackBorder {
+.blackBorderMobile {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,7 +22,7 @@ $color-secondary: #fcd400;
   border-radius: 247px;
 }
 
-.background {
+.backgroundMobile {
   width: 232px;
   height: 375px;
   background-color: $color-secondary;
@@ -30,39 +30,88 @@ $color-secondary: #fcd400;
   overflow: hidden;
 }
 
-.ferSvg {
+.ferSvgMobile {
   display: flex;
   justify-content: center;
   align-self: center;
   height: inherit;
   margin-top: 80px;
-    & > svg {
-        width: 90%;
-        height: 80%;
-    }
+  & > svg {
+    width: 90%;
+    height: 80%;
+  }
+}
+.backgroundDesktop {
+  display: none;
+}
+.ferSvgDesktop {
+  display: none;
+}
+
+.backgroundDesktop {
+  display: none;
 }
 
 /* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) and (orientation : landscape) {}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+}
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
 
 /* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+}
 
 /* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   /* Styles */
 }
 
 /* Desktops and laptops ----------- */
-@media only screen and (min-width : 1224px) {
- 
+@media only screen and (min-width: 1025px) {
+  .blackBorderMobile {
+    display: none;
+  }
+  .ferSvgMobile {
+    display: none;
+  }
 
+  .backgroundMobile {
+    display: none;
+  }
+  .blackBorderDesktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 443px;
+    height: 698px;
+    border: 8px solid black;
+    border-radius: 460px;
+  }
+
+  .backgroundDesktop {
+    display: flex;
+    width: 388px;
+    height: 629px;
+    background-color: $color-secondary;
+    border-radius: 238px;
+    overflow: hidden;
+  }
+
+  .ferSvgDesktop {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: inherit;
+    margin-top: 336px;
+   margin-left: 38px;
+  }
 }
 
 /* Large screens ----------- */
-@media only screen and (min-width : 1824px) {
+@media only screen and (min-width: 1824px) {
   /* Styles */
 }

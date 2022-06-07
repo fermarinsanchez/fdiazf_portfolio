@@ -12,6 +12,14 @@
   align-items: center;
 }
 
+.leftContainer {
+  display: none;
+}
+
+.rightContainer {
+  display: none;
+}
+
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width : 321px) and (orientation : landscape) {}
 
@@ -27,7 +35,56 @@
 }
 
 /* Desktops and laptops ----------- */
-@media only screen and (min-width : 1224px) {
+@media only screen and (min-width : 1025px) {
+  .mobileElements {
+    display: none;
+  }
+
+  .leftContainer {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+  }
+
+  .containerGlobo {
+    width: 100%;
+    position: relative;
+    margin-bottom: 186px;
+  }
+  .bocadillo {
+    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -86px;
+    & > svg {
+      position: absolute;
+      top: 50px;
+      right: 96px;
+    }
+    & .globoMessage {
+      position: absolute;
+      top: 0;
+      right: 80px;
+    }
+  
+  }
+   .hola {
+     font-size: 80px;
+     font-family: 'Cochin';
+   }
+  
+  .rightContainer {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+
+  }
+
+  .main {
+    flex-direction: row;
+
+  }
  
 
 }

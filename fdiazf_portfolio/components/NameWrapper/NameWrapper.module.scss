@@ -31,8 +31,21 @@
 }
 
 /* Desktops and laptops ----------- */
-@media only screen and (min-width : 1224px) {
- 
+@media only screen and (min-width : 1025px) {
+  .nameContainer {
+    justify-content: flex-start;
+    align-items: unset;
+    width: 300px;
+    margin-left: 4rem;
+    & > h2 {
+        font-size: 79px;
+        line-height: 68px;
+    }
+    & > h5 {
+      font-size: 20px;
+      margin-left: 10px;
+  }
+}
 
 }
 

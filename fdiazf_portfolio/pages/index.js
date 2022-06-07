@@ -38,22 +38,51 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-    <div className={styles.mirrorContainer}>
-    <Mirror 
-          isClicked={isClicked}
-        />
-    </div>
-       
-        <NameWrapper />
-        <div ref={homeButtonRef} onClick={hadleAnimation}>
+        <div className={styles.leftContainer}>
+          <div className={styles.containerGlobo}>
+            <div className={styles.bocadillo}>
+              <svg width="218" height="101" viewBox="0 0 218 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M213.277 51.471H181.37L192.105 96.0625L148.929 51.471H5V5.20508" stroke="black" stroke-width="9.1752" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <div className={styles.globoMessage}>
+              <h1 className={styles.hola}>
+                ¡Hola!
+              </h1>
+            </div>
+            </div>
+            
+          </div>
+          <NameWrapper />
+        </div>
+        <div className={styles.mirrorContainer}>
+          <Mirror
+            isClicked={isClicked}
+          />
+          <div className={styles.mobileElements}>
+            <NameWrapper />
+            <div ref={homeButtonRef} onClick={hadleAnimation}>
+              <FatButton
+                text={'Empezar'}
+                link={'/menu'}
+                timeOut={1000}
+              />
+            </div>
+          </div>
+        </div>
+        <div className={styles.rightContainer}>
           <FatButton
-            text={'Empezar'}
-            link={'/menu'}
-            timeOut={1000}
+            text={'Sobre mí'}
+          />
+          <FatButton
+            text={'Portfolio'}
+          />
+          <FatButton
+            text={'Contacto'}
           />
         </div>
+
       </main>
-{/* 
+      {/* 
       <footer className={styles.footer}>
        
       </footer> */}
