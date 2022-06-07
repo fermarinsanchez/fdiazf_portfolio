@@ -1,7 +1,7 @@
 import React from "react";
 import NameWrapper from "../components/NameWrapper/NameWrapper";
 import FatButton from "../components/FatButton/FatButton";
-import styles from '../styles/menu.module.scss'
+import styles from '../styles/Menu.module.scss'
 
 const menu = () => {
     return (

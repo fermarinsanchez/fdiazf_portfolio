@@ -29,7 +29,12 @@
 }
 
 /* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) and (orientation : landscape) {}
+@media only screen and (min-width : 321px) and (orientation : landscape) {
+
+    .mainContainer {
+        width: 50%;
+    }
+}
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {}
