@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import { gsap } from "gsap";
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Mirror from '../components/Mirror/Mirror'
 import NameWrapper from '../components/NameWrapper/NameWrapper'
@@ -34,6 +33,7 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
         <meta name="description" content="Fernando Díaz Franco Portfolio" />
+        <meta http-equiv="ScreenOrientation" content="autoRotate:disabled"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

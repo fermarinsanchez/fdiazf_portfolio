@@ -110,7 +110,7 @@ const AboutMe = () => {
                 <p>¿Quieres saber más de mí?</p>
                 <FatButton 
                     text={'¿Hablamos?'}
-                    link={'mailto:fdiazfr@gmail.com'}
+                    anchor={'mailto:fdiazfr@gmail.com'}
                 />
                 
 
