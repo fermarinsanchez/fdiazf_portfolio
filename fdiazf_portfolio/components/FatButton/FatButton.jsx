@@ -2,30 +2,30 @@ import React, {useEffect, useState} from 'react'
 import Link from 'next/link'
 import styles from './FatButton.module.scss'
 
-const FatButton = (props) => {
+const FatButton = ({upperText, link, color, anchor, target, text}) => {
 
     return (
         <div className={styles.mainContainer}>
-            {props.upperText && <p>{props.upperText}</p>}
-            {props.link
-                ? <Link href={`${props.link}`}>
+            {upperText && <p>{upperText}</p>}
+            {link
+                ? <Link href={`${link}`}>
                     <div className={styles.buttonShadow}>
-                        <div className={styles.fatButtonContainer} style={props.color && { backgroundColor: props.color }}>
-                            <p className={styles.buttonText}>{props.text}</p>
+                        <div className={styles.fatButtonContainer} style={color && { backgroundColor: color }}>
+                            <p className={styles.buttonText}>{text}</p>
                         </div>
                     </div>
                 </Link>
-                : props.anchor
-                    ?   <a href={`${props.anchor}`} target={`${props.target}`}>
+                : anchor
+                    ?   <a href={`${anchor}`} target={`${target}`}>
                             <div className={styles.buttonShadow}>
-                                <div className={styles.fatButtonContainer} style={props.color && { backgroundColor: props.color }}>
-                                    <p className={styles.buttonText}>{props.text}</p>
+                                <div className={styles.fatButtonContainer} style={color && { backgroundColor: color }}>
+                                    <p className={styles.buttonText}>{text}</p>
                                 </div>
                             </div>
                         </a>
                     : <div className={styles.buttonShadow}>
-                        <div className={styles.fatButtonContainer} style={props.color && { backgroundColor: props.color }}>
-                            <p className={styles.buttonText}>{props.text}</p>
+                        <div className={styles.fatButtonContainer} style={color && { backgroundColor: color }}>
+                            <p className={styles.buttonText}>{text}</p>
                         </div>
                     </div>
             }
