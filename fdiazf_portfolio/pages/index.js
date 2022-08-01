@@ -202,7 +202,31 @@ export default function Home() {
   }
 
   useEffect(() => {
-    
+    if( handleSidebar ){
+    gsap.from(DesktopSidebarRef.current, {
+      duration: 1,
+      x: '25%',
+      ease: "power3.out",
+    })
+    gsap.to(DesktopSidebarRef.current, {  
+      duration: 1,
+      x: 0,
+      ease: "power3.out",
+      delay: 1,
+    })
+  } else {
+    gsap.from(DesktopSidebarRef.current, {
+      duration: 1,
+      x: 0,
+      ease: "power3.out",
+    })
+    gsap.to(DesktopSidebarRef.current, {  
+      duration: 1,
+      x: '25%',
+      ease: "power3.out",
+      delay: 1,
+    })
+  }
   
   }, [handleSidebar])
 
@@ -320,11 +344,11 @@ export default function Home() {
           <div
             onMouseEnter={handleAboutWrapperEnter}
             onMouseLeave={handleAboutWrapperLeave}
-            onClick={() => setHandleSidebar(!handleSidebar)}
             className={styles.rightButtons}
           >
             <FatButton
               text={'Sobre mí'}
+              link={'/about-me'}
             />
           </div>
           <div
@@ -352,14 +376,11 @@ export default function Home() {
       </main>
       {handleSidebar && 
         <div className={styles.DesktopSidebar} ref={DesktopSidebarRef}>
- HEloasdfasdfasdfasd
- fasdf
- asd
- falsesdf
- asdf
- asdfa
- DesktopSidebarRefasd
- f
+          <div className={styles.closeIconSidebar} onClick={() => setHandleSidebar(false)}>
+          <svg width="30" height="30" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.3536 12.344L10 11.9904L9.64645 12.344L2.90264 19.0878C2.35301 19.6374 1.46187 19.6374 0.91223 19.0878C0.362592 18.5381 0.362592 17.647 0.912229 17.0974L7.65603 10.3536L8.00959 10L7.65603 9.64645L0.912228 2.90264C0.36259 2.353 0.362591 1.46187 0.912229 0.912229C1.46187 0.362591 2.353 0.362591 2.90264 0.912228L9.64645 7.65603L10 8.00959L10.3536 7.65603L17.0974 0.912228C17.647 0.36259 18.5381 0.362591 19.0878 0.912229C19.6374 1.46187 19.6374 2.353 19.0878 2.90264L12.344 9.64645L11.9904 10L12.344 10.3536L19.0878 17.0974C19.6374 17.647 19.6374 18.5381 19.0878 19.0878C18.5381 19.6374 17.647 19.6374 17.0974 19.0878L10.3536 12.344Z" fill="black" stroke="black"/>
+</svg>
+          </div>
       </div>
       }
      

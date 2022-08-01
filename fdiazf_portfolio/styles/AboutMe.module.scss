@@ -18,15 +18,15 @@
   align-items: flex-start;
   margin: 24px;
   & > h1 {
-      font-family: 'Cochin';
-      font-size: 54px;
-      font-weight: 700;
+    font-family: "Cochin";
+    font-size: 54px;
+    font-weight: 700;
   }
   & > p {
-        font-family: 'SF UI Display';
-        font-size: 12px;
-        font-weight: 400;
-        margin-top: 0px
+    font-family: "SF UI Display";
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 0px;
   }
 }
 
@@ -40,77 +40,120 @@
 
 .description {
   margin: 24px;
-  font-family: 'SF UI Display';
+  font-family: "SF UI Display";
   font-size: 16px;
 }
 
 .lists {
   margin: 0 24px 24px 24px;
   & > ul {
-      margin-left: 0px;
-      padding: 0px;
+    margin-left: 0px;
+    padding: 0px;
   }
   & > ul > li {
-      list-style-type: none;
-      margin-left: 0px;
+    list-style-type: none;
+    margin-left: 0px;
   }
 }
 .listTitle {
-    font-family: 'SF UI Display';
-    font-size: 16px;
-    font-weight: 700;
+  font-family: "SF UI Display";
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .containerAptitudes {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    & .aptitudes {
-        background-color: #FCD400;
-        min-width: 166px;
-        text-align: center;
-        margin: 10px 0px;
-        padding: 0px 30px;
-        & > p {
-            font-family: 'Cochin';
-            font-weight: 700;
-            font-size: 16px;
-            margin-top:6px;
-            margin-bottom: 6px;
-        }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-    }
+.aptitudes {
+  background-color: #fcd400;
+  min-width: 166px;
+  text-align: center;
+  margin: 10px 0px;
+  margin-bottom: 0px;
+  padding: 1px 30px;
+  & > p {
+    font-family: "Cochin";
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
 }
 
 .hablamos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) and (orientation : landscape) {}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+}
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
 
 /* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+}
 
 /* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   /* Styles */
 }
 
 /* Desktops and laptops ----------- */
-@media only screen and (min-width : 1224px) {
- 
+@media only screen and (min-width: 1025px) {
+  .desktopRows {
+    display: flex;
+    margin-left: 36px;
+    margin-right: 36px;
+  }
+  .image {
+    width: 386px;
+    height: 394px;
+  }
+  .desktopFirstRow,
+  .desktopSecondRow,
+  .desktopThirdRow {
+    width: 33%;
+  }
+  .desktopThirdRow {
+    margin-top: 24px;
+  }
 
+  .name > h1 {
+    font-size: 79px;
+    line-height: 68px;
+  }
+  .name > p {
+    font-size: 20px;
+  }
+  .herramientasList > li {
+    font-weight: 700;
+  }
+  .containerAptitudes {
+    align-items: flex-start;
+  }
+  .desktopAptitudesByPairs {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: fit-content;
+    & > p {
+      margin-top: 6px;
+      margin-bottom: 6px;
+    }
+  }
 }
 
 /* Large screens ----------- */
-@media only screen and (min-width : 1824px) {
+@media only screen and (min-width: 1824px) {
   /* Styles */
 }
