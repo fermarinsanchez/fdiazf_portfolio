@@ -22,12 +22,14 @@ const AboutMe = () => {
         ]
     }
 
-    const screenWidth = window !== undefined && window.innerWidth
+    const screenWidth = () => {
+        return typeof window !== undefined && window.innerWidth
+    } 
     return (
         <div className={styles.mainContaier}>
             <SectionHeader
                 title={'Sobre mí'}
-                link={screenWidth > 900 ? '/' : '/menu'}
+                link={screenWidth() > 900 ? '/' : '/menu'}
             />
             <div className={styles.desktopRows}>
                 <div className={styles.desktopFirstRow}>
