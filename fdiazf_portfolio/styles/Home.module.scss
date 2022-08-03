@@ -13,8 +13,6 @@
   align-items: center;
 }
 
-
-
 .leftContainer {
   display: none;
 }
@@ -130,13 +128,40 @@
     display: block;
     width: 35%;
     height: 100%;
-    background-color: #FCD400;
+    background-color: #fcd400;
   }
 
   .closeIconSidebar {
     position: absolute;
     right: 64px;
     top: 50%;
+  }
+
+  .name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: fit-content;
+    margin: 0 auto;
+    padding-top: 32px;
+    & > h1 {
+      font-family: "Cochin";
+      font-size: 79px;
+      line-height: 68px;
+      font-weight: 700;
+      width: 330px;
+    }
+    & > p {
+      font-family: "SF UI Display";
+      font-size: 20px;
+      font-weight: 400;
+      margin-top: 0px;
+    }
+  }
+  .sidebarButtonsContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 337px;
   }
 }
 

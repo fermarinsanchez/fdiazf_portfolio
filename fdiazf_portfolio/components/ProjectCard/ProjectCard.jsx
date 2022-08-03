@@ -11,14 +11,14 @@ const ProjectCard = (props) => {
 
   return (
     <div className={styles.mainContainer} id={`${props.id}`}>
-      <img src={props.image} alt={props.title} />
+      <img src={props.image} alt={props.title} style={props.imgStyle}/>
       <div className={styles.titleContainer}>
         <p>{props.title}</p>
       </div>
       <div className={styles.descriptionContainer}>
         <p>{props.description}</p>
       </div>
-      <div onClick={handleClick}>
+      <div onClick={props.handleAnimation ? handleClick : null}>
         {!props.isOpen ?
           <FatButton
             text={'Ver más'}
