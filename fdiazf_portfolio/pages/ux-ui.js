@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React, {useRef, useEffect} from 'react'
 import ProjectCard from '../components/ProjectCard/ProjectCard'
 import SectionHeader from '../components/SectionHeader/SectionHeader'

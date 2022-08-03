@@ -1,3 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState, useEffect, useRef } from 'react'
 import styles from '../styles/Ilustracion.module.scss'
 import SectionHeader from '../components/SectionHeader/SectionHeader'

@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @next/next/no-img-element */
 import React, { useRef, useState, useEffect } from 'react'
 import { gsap } from 'gsap'
 import ProjectCard from '../ProjectCard/ProjectCard';
