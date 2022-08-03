@@ -22,7 +22,7 @@ const AboutMe = () => {
         ]
     }
 
-    const screenWidth = window.innerWidth
+    const screenWidth = window !== undefined && window.innerWidth
     return (
         <div className={styles.mainContaier}>
             <SectionHeader
