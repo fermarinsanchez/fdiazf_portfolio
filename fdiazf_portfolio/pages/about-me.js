@@ -3,6 +3,7 @@ import SectionHeader from '../components/SectionHeader/SectionHeader'
 import AboutSection from '../components/AboutSection/AboutSection'
 import styles from '../styles/AboutMe.module.scss'
 import FatButton from '../components/FatButton/FatButton'
+import {isMobile} from 'react-device-detect';
 
 const AboutMe = () => {
 
@@ -22,14 +23,12 @@ const AboutMe = () => {
         ]
     }
 
-    const screenWidth = () => {
-        return typeof window !== undefined && window.innerWidth
-    } 
+   
     return (
         <div className={styles.mainContaier}>
             <SectionHeader
                 title={'Sobre mí'}
-                link={screenWidth() > 900 ? '/' : '/menu'}
+                link={isMobile ? '/menu' : '/'}
             />
             <div className={styles.desktopRows}>
                 <div className={styles.desktopFirstRow}>
