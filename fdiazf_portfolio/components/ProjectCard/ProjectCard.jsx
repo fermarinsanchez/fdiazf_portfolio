@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import FatButton from '../FatButton/FatButton'
 import styles from './ProjectCard.module.scss'

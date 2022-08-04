@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import SectionHeader from '../components/SectionHeader/SectionHeader'
 import AboutSection from '../components/AboutSection/AboutSection'
