@@ -6,7 +6,7 @@ import UXUISection from '../components/UXUISection/UXUISection';
 import IllustrationSection from '../components/IllustrationSection/IllustrationSection';
 import styles from '../styles/Portfolio.module.scss'
 
-const portfolio = () => {
+const Portfolio = () => {
 
     const buttonRef = useRef();
     const arrowRef = useRef();
@@ -77,4 +77,4 @@ const portfolio = () => {
     )
 }
 
-export default portfolio
+export default Portfolio
