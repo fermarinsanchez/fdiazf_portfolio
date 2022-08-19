@@ -274,7 +274,7 @@ export default function Home() {
               </svg>
               <div className={styles.globoMessage}>
                 <h1 className={styles.hola}>
-                  ¡Hola!
+                  Hola!
                 </h1>
               </div>
             </div>
@@ -337,7 +337,7 @@ export default function Home() {
                 </svg>
                 <div className={styles.globoMessage}>
                   <p className={styles.contactoBocadillo}>
-                    ¿Hablamos?
+                    Hablamos?
                   </p>
                 </div>
               </div>
