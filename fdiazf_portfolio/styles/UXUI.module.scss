@@ -39,6 +39,8 @@
 
 .layoutContainer__right {
   width: 75%;
+  height: 100vh;
+  overflow-y: scroll;
 }
 .right__title > h1 {
   font-family: "Cochin";
