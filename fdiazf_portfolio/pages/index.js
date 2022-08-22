@@ -438,7 +438,7 @@ export default function Home() {
                 />
                 <FatButton
                     text={'Linkedin'}
-                    anchor={'www.linkedin.com/in/fdiazfr'}
+                    anchor={'https://linkedin.com/in/fdiazfr'}
                     target={'_blank'}
                     color={'#FFFFFF'}
                 />

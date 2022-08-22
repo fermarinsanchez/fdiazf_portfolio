@@ -24,7 +24,7 @@ const contacto = () => {
       <div className={styles.containerButtonLinkedin}>
         <FatButton
           text={'Linkedin'}
-          anchor={'www.linkedin.com/in/fdiazfr'}
+          anchor={'https://linkedin.com/in/fdiazfr'}
           target={'_blank'}
         />
       </div>
