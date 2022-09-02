@@ -54,12 +54,12 @@ const AboutMe = () => {
                             description={textDescription.Ironhack}
                         />
                         <AboutSection
-                            title={'ESUELA DE ARTE TOLEDO'}
+                            title={'ESCUELA DE ARTE TOLEDO'}
                             subtitle={'Gráfica publicitaria (2005-2007)'}
                             description={textDescription.EAToledo}
                         />
                         <AboutSection
-                            title={'ESUELA DE ARTE TALAVERA'}
+                            title={'ESCUELA DE ARTE TALAVERA'}
                             subtitle={'Arte final (2003-2004)'}
                             description={textDescription.EATalavera}
                         />
