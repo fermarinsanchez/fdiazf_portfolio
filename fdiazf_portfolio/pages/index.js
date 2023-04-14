@@ -87,40 +87,6 @@ export default function Home() {
     setIsClicked(!isClicked)
   }
 
-  const handleNameWrapperEnter = () => {
-    if (!isNameEnter) {
-      setIsNameEnter(true)
-      gsap.from(soyYoRef.current, {
-        duration: 1,
-        opacity: 0,
-        ease: "power3.out",
-      })
-      gsap.to(soyYoRef.current, {
-        duration: 1,
-        opacity: 1,
-        ease: "power3.out",
-        delay: 1,
-      })
-    }
-  }
-
-  const handleNameWrapperLeave = () => {
-    gsap.from(soyYoRef.current, {
-      duration: 0.1,
-      opacity: 1,
-      ease: "power3.out",
-    })
-    gsap.to(soyYoRef.current, {
-      duration: 0.1,
-      opacity: 0,
-      ease: "power3.out",
-      delay: 0.1,
-    })
-    setTimeout(() => {
-      setIsNameEnter(false)
-    }, 100)
-  }
-
   const handleAboutWrapperEnter = () => {
     if (!isAboutMeEnter) {
       setIsAboutMeEnter(true)
@@ -279,70 +245,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div
-            onMouseEnter={handleNameWrapperEnter}
-            onMouseLeave={handleNameWrapperLeave}
-          >
+         
             <NameWrapper />
-          </div>
         </div>
         <div className={styles.mirrorContainer}>
-          {isNameEnter &&
-            <div className={styles.containerGloboSoyYo} ref={soyYoRef}>
-              <div className={styles.bocadillo}>
-                <svg width="218" height="101" viewBox="0 0 218 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M213.277 51.471H181.37L192.105 96.0625L148.929 51.471H5V5.20508" stroke="black" strokeWidth="9.1752" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <div className={styles.globoMessage}>
-                  <h1 className={styles.soyYo}>
-                    ¡Ese soy yo!
-                  </h1>
-                </div>
-              </div>
-            </div>
-          }
-          {isAboutMeEnter &&
-            <div className={styles.containerGloboSoyYo} ref={isAboutRef}>
-              <div className={styles.bocadillo}>
-                <svg width="218" height="101" viewBox="0 0 218 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M213.277 51.471H181.37L192.105 96.0625L148.929 51.471H5V5.20508" stroke="black" strokeWidth="9.1752" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <div className={styles.globoMessage}>
-                  <p className={styles.aboutBocadillo}>
-                    Toda la info sobre quién soy, de dónde vengo y a dónde voy
-                  </p>
-                </div>
-              </div>
-            </div>
-          }
-          {isPortfolioEnter &&
-            <div className={styles.containerGloboSoyYo} ref={isPortfolioRef}>
-              <div className={styles.bocadillo}>
-                <svg width="218" height="101" viewBox="0 0 218 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M213.277 51.471H181.37L192.105 96.0625L148.929 51.471H5V5.20508" stroke="black" strokeWidth="9.1752" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <div className={styles.globoMessage}>
-                  <p className={styles.portfolioBocadillo}>
-                    Mis proyectos de UX/UI e Ilustración
-                  </p>
-                </div>
-              </div>
-            </div>
-          }
-          {isContactEnter &&
-            <div className={styles.containerGloboSoyYo} ref={isContactRef}>
-              <div className={styles.bocadillo}>
-                <svg width="218" height="101" viewBox="0 0 218 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M213.277 51.471H181.37L192.105 96.0625L148.929 51.471H5V5.20508" stroke="black" strokeWidth="9.1752" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <div className={styles.globoMessage}>
-                  <p className={styles.contactoBocadillo}>
-                    Hablamos?
-                  </p>
-                </div>
-              </div>
-            </div>
-          }
           <Mirror
             isClicked={isClicked}
             isNameEnter={isNameEnter}
@@ -350,8 +256,6 @@ export default function Home() {
             isPortfolioEnter={isPortfolioEnter}
             isContactEnter={isContactEnter}
           />
-
-
           <div className={styles.mobileElements}>
             <NameWrapper />
             <div ref={homeButtonRef} onClick={hadleAnimation}>
@@ -446,11 +350,6 @@ export default function Home() {
           </div>
         </div>
       }
-
-      {/* 
-      <footer className={styles.footer}>
-       
-      </footer> */}
     </div>
   )
 }

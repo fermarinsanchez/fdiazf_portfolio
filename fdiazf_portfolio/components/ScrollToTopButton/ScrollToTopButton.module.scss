@@ -1,0 +1,28 @@
+.main_container {
+  position: fixed;
+  z-index: 9999;
+  bottom: 18px;
+  right: 18px;
+  width: 102px;
+  height: 102px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../../public/assets/svg/yellow_drop.svg");
+}
+.face {
+  position: absolute;
+  top: 33%;
+  left: 18%;
+  & > img {
+    width: 48px;
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 13%;
+  left: 33%;
+  & > img {
+    width: 18px;
+  }
+}

@@ -1,45 +1,141 @@
 .mainContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #FCD400;
-    height: 237px;
-    width: 100vw;
-    font-family: 'SF UI Display';
-    & > p {
-        margin-bottom: 0px;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fcd400;
+  height: 237px;
+  width: 100vw;
+  font-family: "SF UI Display";
+  & > p {
+    margin-bottom: 0px;
+  }
+}
+
+.hablamos {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & > p {
+    margin-bottom: 0px;
+  }
+}
+
+.emailButtonDesktop {
+  margin-top: -18px;
+  position: relative;
+  height: 116px;
+  & > p {
+    padding-left: 32px;
+  }
+}
+
+.ferEmailCopied {
+  position: absolute;
+  height: 110px;
+  left: 0;
+  right: 0;
+  bottom: 2;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: hidden;
+  display: none;
+  & > img {
+    width: 100%;
+    height: 120px;
+  }
+}
+
+.copiedMessage {
+  position: absolute;
+  top: 6%;
+  right: 0;
+  background-color: white;
+  border-radius: 20px 20px 20px 0px;
+  padding: 12px;
+  opacity: 0;
+  & span {
+    font-family: "Cochin";
+  }
 }
 
 .elementContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -42px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -42px;
 }
 
 /* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) and (orientation : landscape) {}
+@media only screen and (min-width: 321px) and (orientation: landscape) {
+}
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
 
 /* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+}
 
 /* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
   /* Styles */
 }
 
 /* Desktops and laptops ----------- */
-@media only screen and (min-width : 1224px) {
- 
+@media only screen and (min-width: 1025px) {
+  .hablamos {
+    margin-left: 0px;
+  }
+  .hablamos > p {
+    margin-top: 16px;
+    margin-bottom: -8px;
+    margin-left: -26px;
+  }
+  .emailButtonDesktop {
+    margin-top: -18px;
+    position: relative;
+    & > p {
+      padding-left: 32px;
+    }
+  }
 
+  .ferEmailCopied {
+    position: absolute;
+    height: 110px;
+    left: 0;
+    right: 0;
+    bottom: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: hidden;
+    display: none;
+
+    & > img {
+      width: 100%;
+      height: 120px;
+      // visibility: hidden;
+    }
+  }
+
+  .copiedMessage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+    border-radius: 20px 20px 20px 0px;
+    padding: 12px;
+    opacity: 0;
+    & span {
+      font-family: "Cochin";
+    }
+  }
 }
 
 /* Large screens ----------- */
-@media only screen and (min-width : 1824px) {
+@media only screen and (min-width: 1824px) {
   /* Styles */
 }

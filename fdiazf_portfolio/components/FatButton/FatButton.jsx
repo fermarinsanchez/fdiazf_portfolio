@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import styles from './FatButton.module.scss'
 
-const FatButton = ({upperText, link, color, anchor, target, text}) => {
+const FatButton = ({ upperText, link, color, anchor, target, text, callback }) => {
 
     return (
         <div className={styles.mainContainer}>
@@ -16,16 +16,16 @@ const FatButton = ({upperText, link, color, anchor, target, text}) => {
                     </div>
                 </Link>
                 : anchor
-                    ?   <a href={`${anchor}`} target={`${target}`}>
-                            <div className={styles.buttonShadow}>
-                                <div className={styles.fatButtonContainer} style={color && { backgroundColor: color }}>
-                                    <p className={styles.buttonText}>{text}</p>
-                                </div>
+                    ? <a href={`${anchor}`} target={`${target}`}>
+                        <div className={styles.buttonShadow}>
+                            <div className={styles.fatButtonContainer} style={color && { backgroundColor: color }}>
+                                <p className={styles.buttonText}>{text}</p>
                             </div>
-                        </a>
+                        </div>
+                    </a>
                     : <div className={styles.buttonShadow}>
-                        <div className={styles.fatButtonContainer} style={color && { backgroundColor: color }}>
-                            <p className={styles.buttonText}>{text}</p>
+                        <div className={styles.fatButtonContainer} onClick={callback} style={color && { backgroundColor: color }}>
+                            <p className={callback ? styles.emailText : styles.buttonText}>{text}</p>
                         </div>
                     </div>
             }

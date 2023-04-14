@@ -10,13 +10,14 @@
 }
 
 .experienceContainer {
-  margin: 24px 24px 0 24px;
+  margin: 64px 24px 24px 24px;
+  padding-bottom: 36px;
 }
 .name {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 24px;
+  margin: 24px 24px 24px 0px;
   & > h1 {
     font-family: "Cochin";
     font-size: 54px;
@@ -39,7 +40,8 @@
 }
 
 .description {
-  margin: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
   font-family: "SF UI Display";
   font-size: 16px;
 }
@@ -69,7 +71,7 @@
 }
 
 .aptitudes {
-  background-color: #fcd400;
+  background-color: white;
   min-width: 166px;
   text-align: center;
   margin: 10px 0px;
@@ -85,10 +87,80 @@
 }
 
 .hablamos {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  & > p {
+    margin-bottom: 0px;
+  }
+}
+.desktopFirstRow {
+  background-color: #fcd400;
+  height: auto;
+  // margin-left: 0px;
+  padding-bottom: 32px;
+  margin-top: -72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+.image {
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+  // margin-left: 32px;
+
+  & > img {
+    width: 80%;
+  }
+}
+
+.herraminentasContainer {
+  width: 100%;
+  padding-left: 24px;
+  padding-top: 32px;
+}
+
+.emailButtonDesktop {
+  margin-top: -18px;
+  position: relative;
+  height: 116px;
+  & > p {
+    padding-left: 32px;
+  }
+}
+.ferEmailCopied {
+  position: absolute;
+  height: 110px;
+  left: 0;
+  right: 0;
+  bottom: 2;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: hidden;
+  display: none;
+  & > img {
+    width: 100%;
+    height: 120px;
+  }
+}
+.copiedMessage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+  border-radius: 20px 20px 20px 0px;
+  padding: 12px;
+  opacity: 0;
+  & span {
+    font-family: "Cochin";
+  }
 }
 
 /* Smartphones (landscape) ----------- */
@@ -112,34 +184,136 @@
 @media only screen and (min-width: 1025px) {
   .desktopRows {
     display: flex;
-    margin-left: 36px;
     margin-right: 36px;
   }
+  .desktopSecondRow {
+    margin-top: -60px;
+  }
+
   .image {
-    width: 386px;
-    height: 394px;
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: flex-start;
+    // margin-left: 32px;
+
+    & > img {
+      width: 365px;
+    }
   }
-  .desktopFirstRow,
-  .desktopSecondRow,
-  .desktopThirdRow {
+
+  .desktopFirstRow {
+    background-color: #fcd400;
+    height: auto;
+    margin-left: 0px;
+    padding-bottom: 32px;
+    padding-left: 64px;
+    padding-right: 32px;
+    margin-top: -72px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     width: 33%;
+    min-width: 472px;
+    min-height: 100vh;
   }
+
   .desktopThirdRow {
     margin-top: 24px;
   }
 
-  .name > h1 {
-    font-size: 79px;
-    line-height: 68px;
+  .experienceContainer {
+    margin-top: 24px;
   }
-  .name > p {
-    font-size: 20px;
+
+  .name {
+    margin-bottom: 0px;
+    & > h1 {
+      font-size: 58px;
+      line-height: 68px;
+    }
+    & > p {
+      font-size: 20px;
+    }
   }
-  .herramientasList > li {
+
+  .description {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    max-width: 365px;
+  }
+
+  .hablamos {
+    margin-left: 0px;
+  }
+  .hablamos > p {
+    margin-top: 16px;
+    margin-bottom: -8px;
+    margin-left: -26px;
+  }
+
+  .emailButtonDesktop {
+    margin-top: -18px;
+    position: relative;
+    & > p {
+      padding-left: 32px;
+    }
+  }
+  .ferEmailCopied {
+    position: absolute;
+    height: 110px;
+    left: 0;
+    right: 0;
+    bottom: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: hidden;
+    display: none;
+
+    & > img {
+      width: 100%;
+      height: 120px;
+    }
+  }
+
+  .copiedMessage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: white;
+    border-radius: 20px 20px 20px 0px;
+    padding: 12px;
+    opacity: 0;
+    & span {
+      font-family: "Cochin";
+    }
+  }
+
+  .herraminentasContainer {
+    padding-left: 0px;
+    padding-top: 0px;
+    margin-bottom: 16px;
+  }
+  .listTitle {
+    margin-top: 32px;
+    // margin-left: 32px;
+  }
+  .herramientasList {
     font-weight: 700;
+    & > p {
+      // margin-left: 32px;
+    }
   }
+
+  .idiomasList {
+    // margin-left: 32px;
+  }
+
   .containerAptitudes {
     align-items: flex-start;
+    // margin-left: 32px;
   }
   .desktopAptitudesByPairs {
     display: flex;
@@ -149,6 +323,9 @@
     & > p {
       margin-top: 6px;
       margin-bottom: 6px;
+    }
+    & .aptitudes {
+      background-color: white;
     }
   }
 }
